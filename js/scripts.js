@@ -11,7 +11,7 @@ $(document).ready(function(){
     // var result = [$("#item1").val(),$("#item2").val(), $("#item3").val(), $("#item4").val(), $("#item5").val()]
     var results = ["item1", "item2", "item3", "item4", "item5"];
     var secondArray = results.map(function(result) {
-      return $("input#" + result).val();
+      return $("input#" + result).val().toUpperCase();
 
       // add to a new array here
       // var toAlphabetic = results.map(function(toAlp) {
@@ -23,8 +23,8 @@ $(document).ready(function(){
     //now sort array.
     secondArray.sort();
     alert(secondArray);
-    $(secondArray).forEach(function(userInput) {
-      $("#items").append("<li>" + userInput + "</li>");
+    secondArray.forEach(function(userInput) {
+    $("#items").append("<li>" + userInput + "</li>");
     });
 
 
